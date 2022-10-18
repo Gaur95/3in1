@@ -1,5 +1,5 @@
 FROM ubuntu:18.04
-RUN apt update ; apt install openssh-server  apache2  supervisor -y
+RUN apt update ; apt install openssh-server  apache2  supervisor docker.io  -y
 RUN mkdir -p /var/log/supervisor
 RUN echo root:q123 | chpasswd
 RUN sed -i 's/#PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
