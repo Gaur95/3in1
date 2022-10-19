@@ -1,4 +1,6 @@
 FROM ubuntu:18.04
+LABEL name=akash
+LABEL email=aakashgaur57@gmail.com
 RUN apt update ; apt install openssh-server  apache2  supervisor docker.io  -y
 RUN mkdir -p /var/log/supervisor
 RUN echo root:q123 | chpasswd
